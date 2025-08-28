@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.arcade-font {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.carnival-btn {
+  background: linear-gradient(180deg, #e07fd7 0%, #ad65ff 100%);
+  color: #fff;
+  font-family: 'Luckiest Guy','Comic Sans MS',cursive,sans-serif;
+  font-size: 23px;
+  border: none;
+  border-radius: 21px;
+  padding: 14px 30px;
+  margin: 0 7px;
+  box-shadow: 0 6px 18px #d088e672;
+  transition: transform .09s, filter .15s;
+  cursor: pointer;
+  outline: none;
+}
+.carnival-btn:active { transform: scale(.96); filter: brightness(.93); }
+
+.carnival-btn-secondary {
+  background: linear-gradient(180deg, #53c0f7 0%, #25bcd0 100%);
+  color: #fff;
+  font-family: 'Luckiest Guy','Comic Sans MS',cursive,sans-serif;
+  font-size: 20px;
+  border: none;
+  border-radius: 18px;
+  padding: 10px 22px;
+  box-shadow: 0 2.5px 9px #51b8db73;
+  margin-top: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+@media (max-width: 550px) {
+  .navbar-wallet-addr, .navbar-wallet-btn, .navbar-vol-ctrl {
+    font-size: 13px !important;
+  }
+}
+
+/* El canvas ocupa todo el alto útil (debajo de la navbar) sin scroll */
+#phaser-root {
+  width: 100vw;
+  height: calc(100vh - 56px); /* 56px ~ alto de tu navbar */
+  overflow: hidden;
+  position: relative;
+}
+canvas { display: block; }
+html, body { overflow: hidden; } /* evita barras de scroll del body */
